@@ -1,0 +1,234 @@
+/* ===== RESET ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* ===== NAVBAR MAIN ===== */
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  width: 100%;
+  padding: 18px 6%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #ffffff;
+  box-shadow: 0 6px 24px rgba(0,0,0,0.08);
+}
+
+/* ===== LOGO ===== */
+.logo {
+  height: 80px;
+  cursor: pointer;
+}
+
+/* ===== MENU ===== */
+.navbar-menu {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  list-style: none;
+  font-size: 17px;
+  font-weight: 500;
+}
+
+.navbar-menu a {
+  position: relative;
+  padding-bottom: 4px;
+  transition: 0.3s;
+}
+
+.navbar-menu a:hover {
+  color: #c0392b;
+}
+
+.navbar-menu a.active {
+  color: #c0392b;
+  font-weight: 600;
+}
+
+.navbar-menu a.active::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 100%;
+  height: 3px;
+  background: #c0392b;
+  border-radius: 2px;
+}
+
+/* ===== RIGHT SECTION ===== */
+.navbar-right {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+}
+
+.navbar-right img {
+  width: 26px;
+  cursor: pointer;
+  filter: brightness(0);
+}
+
+/* ===== SEARCH ===== */
+.search-input {
+  padding: 8px 14px;
+  border: 1px solid #ddd;
+  border-radius: 20px;
+  outline: none;
+  font-size: 14px;
+  width: 180px;
+  transition: 0.3s;
+}
+
+.search-input:focus {
+  border-color: #e74c3c;
+  width: 220px;
+}
+
+/* ===== CART ===== */
+.navbar-search-icon {
+  position: relative;
+}
+
+.dot {
+  position: absolute;
+  top: -4px;
+  right: -6px;
+  width: 9px;
+  height: 9px;
+  background: #e74c3c;
+  border-radius: 50%;
+}
+
+/* ===== SIGN IN BUTTON ===== */
+.navbar-right button {
+  padding: 9px 22px;
+  border-radius: 30px;
+  border: none;
+  cursor: pointer;
+  background: linear-gradient(135deg, #c0392b, #e74c3c);
+  color: white;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.navbar-right button:hover {
+  transform: scale(1.05);
+}
+
+/* ===== PROFILE ===== */
+.Navbar-profile {
+  position: relative;
+  cursor: pointer;
+}
+
+.Navbar-profile img {
+  width: 30px;
+}
+
+.nav-profile-dropdown {
+  position: absolute;
+  top: 45px;
+  right: 0;
+  background: white;
+  padding: 15px;
+  border-radius: 10px;
+  display: none;
+  flex-direction: column;
+  gap: 12px;
+  min-width: 150px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.12);
+}
+
+.nav-profile-dropdown li {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+}
+
+.nav-profile-dropdown li:hover {
+  color: #c0392b;
+}
+
+.nav-profile-dropdown hr {
+  border: none;
+  height: 1px;
+  background: #eee;
+}
+
+.Navbar-profile:hover .nav-profile-dropdown {
+  display: flex;
+}
+
+/* ===== HAMBURGER ===== */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.hamburger span {
+  width: 25px;
+  height: 3px;
+  background: #333;
+  border-radius: 3px;
+}
+
+/* ================= MOBILE ================= */
+@media (max-width: 900px) {
+
+  .navbar {
+    padding: 15px 5%;
+  }
+
+  .logo {
+    height: 60px;
+  }
+
+  .navbar-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: white;
+    flex-direction: column;
+    gap: 20px;
+    padding: 25px 0;
+    display: none;
+  }
+
+  .navbar-menu.show {
+    display: flex;
+  }
+
+  /* IMPORTANT: button hide nahi hoga */
+  .navbar-right button {
+    padding: 7px 16px;
+    font-size: 14px;
+  }
+
+  .search-input {
+    width: 140px;
+  }
+
+  .search-input:focus {
+    width: 160px;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+}

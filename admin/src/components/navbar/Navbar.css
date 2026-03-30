@@ -1,0 +1,64 @@
+/* ================= NAVBAR ================= */
+
+.navbar {
+  width: 100%;
+  height: 80px;
+  background: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 40px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+  border-bottom: 2px solid #D41406; /* brand accent */
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+/* Logo */
+.logo {
+  height: 78px;
+  width: auto;
+  object-fit: contain;
+}
+
+/* Profile */
+.profile {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+  cursor: pointer;
+  border: 3px solid #D41406;
+  transition: 0.3s ease;
+}
+
+.profile:hover {
+  transform: scale(1.07);
+  border-color: #FF6A00;
+}
+
+
+/* Tablet */
+@media (max-width: 768px) {
+  .navbar {
+    padding: 0 20px;
+    height: 70px;
+  }
+
+  .logo {
+    height: 65px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+  .navbar {
+    padding: 0 15px;
+    height: 65px;
+  }
+
+  .logo {
+    height: 50px;
+  }
+}

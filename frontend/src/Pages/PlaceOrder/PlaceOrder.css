@@ -1,0 +1,186 @@
+/* ==============================
+   MAIN WRAPPER
+============================== */
+
+.place-order {
+  display: flex;
+  justify-content: space-between;
+  gap: 60px;
+  padding: 60px 8%;
+  background: #fafafa;
+}
+
+/* ==============================
+   LEFT SECTION
+============================== */
+
+.place-order-left {
+  flex: 1.5;
+  display: flex;
+  flex-direction: column;
+}
+
+.place-order-left .title {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 25px;
+  color: #2b2b2b;
+}
+
+.place-order-left input {
+  width: 100%;
+  padding: 14px 16px;
+  margin-bottom: 16px;
+  border-radius: 10px;
+  border: 1px solid #e0e0e0;
+  font-size: 15px;
+  outline: none;
+  transition: 0.3s ease;
+  background: #ffffff;
+}
+
+.place-order-left input:focus {
+  border-color: #e74c3c;
+  box-shadow: 0 0 0 3px rgba(231, 76, 60, 0.1);
+}
+
+/* two inputs in one row */
+.multi-fields {
+  display: flex;
+  gap: 15px;
+}
+
+/* ==============================
+   RIGHT SECTION
+============================== */
+
+.place-order-right {
+  flex: 1;
+}
+
+/* ==============================
+   ORDER SUMMARY CARD
+============================== */
+
+.summary-order-payment {
+  background: #ffffff;
+  padding: 28px;
+  border-radius: 18px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+}
+
+.summary-order-payment h3 {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: #2b2b2b;
+}
+
+/* rows */
+.summary-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 14px;
+  font-size: 15px;
+  color: #555;
+}
+
+.summary-row.total {
+  font-size: 17px;
+  font-weight: 700;
+  color: #000;
+}
+
+.summary-order-payment hr {
+  border: none;
+  height: 1px;
+  background: #e4e4e4;
+  margin: 16px 0;
+}
+
+/* ==============================
+   BUTTON
+============================== */
+
+.summary-order-payment button {
+  width: 100%;
+  padding: 15px;
+  margin-top: 18px;
+  border-radius: 30px;
+  border: none;
+  background: #e74c3c;   /* normal color */
+  color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+/* hover gradient (as you said) */
+.summary-order-payment button:hover {
+  background: linear-gradient(
+    135deg,
+    #b11226,
+    #e74c3c,
+    #ffd54f
+  );
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(231, 76, 60, 0.4);
+}
+
+/* ==============================
+   TABLET
+============================== */
+
+@media (max-width: 992px) {
+  .place-order {
+    flex-direction: column;
+    gap: 40px;
+    padding: 40px 6%;
+  }
+
+  .place-order-right {
+    width: 100%;
+  }
+}
+
+/* ==============================
+   MOBILE
+============================== */
+
+@media (max-width: 600px) {
+
+  .place-order {
+    padding: 25px 5%;
+  }
+
+  .multi-fields {
+    flex-direction: column;
+  }
+
+  .place-order-left input {
+    padding: 12px;
+    font-size: 14px;
+  }
+
+  .summary-order-payment {
+    padding: 20px;
+  }
+
+  .summary-order-payment h3 {
+    font-size: 18px;
+  }
+
+  .summary-row {
+    font-size: 14px;
+  }
+
+  .summary-row.total {
+    font-size: 16px;
+  }
+
+  .summary-order-payment button {
+    padding: 13px;
+    font-size: 14px;
+  }
+}

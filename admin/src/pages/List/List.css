@@ -1,0 +1,119 @@
+/* Main Wrapper */
+.list {
+  width: 100%;
+}
+
+/* Title */
+.list > p {
+  font-size: 22px;
+  font-weight: 600;
+  margin-bottom: 25px;
+  color: #222;
+}
+
+/* Table Card */
+.list-table {
+  width: 100%;
+  background: #ffffff;
+  border-radius: 18px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  overflow: hidden;
+  border: 1px solid #f1f1f1;
+}
+
+/* Header Row */
+.list-table-format.title {
+  display: grid;
+  grid-template-columns: 110px 1.5fr 1fr 120px 80px;
+  padding: 18px 25px;
+  background: linear-gradient(to right, #fff, #fff7f5);
+  font-size: 14px;
+  font-weight: 600;
+  color: #444;
+  border-bottom: 1px solid #eee;
+}
+
+/* Normal Rows */
+.list-table-format {
+  display: grid;
+  grid-template-columns: 110px 1.5fr 1fr 120px 80px;
+  align-items: center;
+  padding: 16px 25px;
+  transition: all 0.25s ease;
+  font-size: 14px;
+}
+
+/* Hover Effect */
+.list-table-format:hover {
+  background: rgba(255, 106, 0, 0.06);
+  transform: scale(1.01);
+}
+
+/* Bottom Border */
+.list-table-format:not(:last-child) {
+  border-bottom: 1px solid #f3f3f3;
+}
+
+/* Image */
+.list-table-format img {
+  width: 95px;
+  height: 70px;
+  object-fit: cover;
+  border-radius: 10px;
+  border: 1px solid #eee;
+}
+
+/* Price Styling */
+.list-table-format p:nth-child(4) {
+  font-weight: 600;
+  color: #D41406;
+}
+
+/* Delete Button */
+.cursor {
+  font-size: 18px;
+  font-weight: bold;
+  color: #D41406;
+  cursor: pointer;
+  width: 28px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: 0.2s ease;
+}
+
+.cursor:hover {
+  background: rgba(212, 20, 6, 0.1);
+  color: #FF6A00;
+}
+
+
+/* ================= Responsive ================= */
+
+@media (max-width: 900px) {
+  .list-table-format,
+  .list-table-format.title {
+    grid-template-columns: 80px 1fr 1fr 80px 60px;
+    padding: 14px 15px;
+  }
+
+  .list-table-format img {
+    width: 70px;
+    height: 55px;
+  }
+}
+
+@media (max-width: 600px) {
+  .list-table-format,
+  .list-table-format.title {
+    grid-template-columns: 70px 1fr 70px 50px;
+  }
+
+  /* Hide category on small screens */
+  .list-table-format p:nth-child(3),
+  .list-table-format.title b:nth-child(3) {
+    display: none;
+  }
+}

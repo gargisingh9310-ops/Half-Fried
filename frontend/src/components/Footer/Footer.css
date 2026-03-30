@@ -1,0 +1,155 @@
+/* ================= FOOTER MAIN ================= */
+
+.footer {
+    width: 100%;
+    background-color: #111;
+    color: #fff;
+    padding: 60px 10%;
+    box-sizing: border-box;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 40px;
+}
+
+/* ================= LEFT SECTION ================= */
+
+.footer-content-left img {
+    width: 150px;
+    margin-bottom: 20px;
+}
+
+.footer-content-left p {
+    font-size: 14px;
+    line-height: 1.6;
+    color: #ccc;
+    margin-bottom: 20px;
+}
+
+/* SOCIAL ICONS */
+
+.footer-social-icons {
+    display: flex;
+    gap: 15px;
+}
+
+.footer-social-icons img {
+    width: 28px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.footer-social-icons img:hover {
+    transform: scale(1.1);
+}
+
+
+/* ================= HEADINGS ================= */
+
+.footer-content h2 {
+    font-size: 18px;
+    margin-bottom: 20px;
+    color: #FC8019; /* Swiggy orange accent */
+}
+
+/* ================= LIST STYLE ================= */
+
+.footer-content ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-content ul li {
+    margin-bottom: 10px;
+    font-size: 14px;
+    color: #ccc;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.address{
+  color: #E23744;
+}
+
+.footer-content ul li:hover {
+    color: #FC8019; /* Zomato red hover */
+}
+
+
+/* ================= HR ================= */
+
+.footer hr {
+    margin: 40px 0 20px 0;
+    border: none;
+    height: 1px;
+    background-color: #333;
+}
+
+
+/* ================= BACK TO TOP BUTTON ================= */
+
+.back-to-top {
+    display: block;
+    margin: 0 auto 20px auto;
+    padding: 10px 22px;
+    border: none;
+    border-radius: 25px;
+    background-color: #FC8019;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.back-to-top:hover {
+    background-color: #E23744;
+    transform: translateY(-3px);
+}
+
+
+/* ================= COPYRIGHT ================= */
+
+.footer-copyright {
+    text-align: center;
+    font-size: 13px;
+    color: #aaa;
+}
+
+
+/* ================= RESPONSIVE ================= */
+
+/* Tablet */
+@media (max-width: 992px) {
+    .footer-content {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+    }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+
+    .footer {
+        padding: 40px 6%;
+    }
+
+    .footer-content {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .footer-content h2 {
+        font-size: 16px;
+    }
+
+    .footer-content ul li {
+        font-size: 13px;
+    }
+
+    .footer-content-left img {
+        width: 130px;
+    }
+}

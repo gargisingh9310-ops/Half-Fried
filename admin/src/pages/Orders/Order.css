@@ -1,0 +1,152 @@
+/* ===== MAIN ===== */
+.order {
+  width: 100%;
+  padding: 20px 6%;
+  box-sizing: border-box;
+}
+
+.order h3 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* ===== LIST ===== */
+.order-list {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+/* ===== CARD ===== */
+.order-item {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 20px;
+
+  background: #fff;
+  padding: 18px;
+  border-radius: 12px;
+  box-shadow: 0 4px 18px rgba(0,0,0,0.08);
+  transition: 0.3s;
+}
+
+.order-item:hover {
+  transform: translateY(-2px);
+}
+
+/* ICON */
+.order-item img {
+  width: 55px;
+  height: 55px;
+}
+
+/* ===== DETAILS ===== */
+.order-details {
+  flex: 1;
+}
+
+.order-item-food {
+  font-size: 15px;
+  font-weight: 500;
+  color: #333;
+  margin-bottom: 6px;
+  line-height: 1.4;
+}
+
+.order-item-name {
+  font-size: 14px;
+  font-weight: 600;
+  color: #c0392b;
+  margin-bottom: 6px;
+}
+
+.order-item-address p {
+  font-size: 13px;
+  color: #555;
+  margin: 2px 0;
+}
+
+.order-item-phone {
+  font-size: 13px;
+  margin-top: 5px;
+  color: #777;
+}
+
+/* ===== RIGHT SIDE ===== */
+.order-right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 8px;
+  min-width: 120px;
+}
+
+.order-items-count {
+  font-size: 14px;
+  color: #333;
+  font-weight: 500;
+}
+
+.order-amount {
+  font-size: 16px;
+  font-weight: 700;
+  color: #27ae60;
+}
+
+/* SELECT */
+.order-right select {
+  padding: 7px 10px;
+  border-radius: 6px;
+  border: 1px solid #ddd;
+  font-size: 13px;
+  cursor: pointer;
+  outline: none;
+  background: #fff;
+}
+
+/* ===== TABLET ===== */
+@media (max-width: 900px) {
+  .order-item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .order-right {
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+    margin-top: 10px;
+  }
+}
+
+/* ===== MOBILE ===== */
+@media (max-width: 600px) {
+  .order {
+    padding: 15px 4%;
+  }
+
+  .order h3 {
+    font-size: 20px;
+  }
+
+  .order-item {
+    padding: 14px;
+  }
+
+  .order-item img {
+    width: 45px;
+    height: 45px;
+  }
+
+  .order-right {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .order-right select {
+    width: 100%;
+  }
+}

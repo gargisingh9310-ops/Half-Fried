@@ -8,6 +8,7 @@ import Footer from './components/Footer/Footer'
 import { useState } from 'react'
 import LoginPopup from './components/LoginPopup/LoginPopup'
 import Verify from './Pages/verify/Verify'
+import MyOrders from './Pages/myOrders/MyOrders'
 
 const App = () => {
 
@@ -26,6 +27,7 @@ const [searchText, setSearchText] = useState("")
         < Route path='/cart' element={<Cart/>}/>
         < Route path='/order' element={<PlaceOrder/>}/>
         <Route path='/verify' element={<Verify/>}/>
+        <Route path='/myorders' element={<MyOrders/>}/>
       </Routes>
     </div>
     <Footer/>

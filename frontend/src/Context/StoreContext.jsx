@@ -9,7 +9,7 @@ const StoreContextProvider = (props) => {
   const [food_list, setFoodList] = useState([]);
   const [token, setToken] = useState("");
 
-  const url = "http://localhost:5000";
+  const url = "https://half-fried-backend.onrender.com";
 
   const addToCart = async (itemId) => {
     setCartItem((prev) => {

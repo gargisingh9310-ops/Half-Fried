@@ -89,17 +89,27 @@
 /* ================= MOBILE ================= */
 @media (max-width: 600px) {
   .food-display {
-    padding: 25px 4%;
+    padding: 20px 3%;
   }
 
   .food-display h2 {
-    font-size: 24px;
-    margin-bottom: 22px;
+    font-size: 22px;
+    margin-bottom: 18px;
+    text-align: center;
   }
 
   .food-display-list {
-    grid-template-columns: 1fr;
-    gap: 20px;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px;
+  }
+
+  .food-wrapper {
+    transform: scale(0.95);
+  }
+
+  .new-badge {
+    font-size: 10px;
+    padding: 3px 6px;
   }
 }
 

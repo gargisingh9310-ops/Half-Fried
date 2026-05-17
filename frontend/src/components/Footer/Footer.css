@@ -149,7 +149,14 @@
         font-size: 13px;
     }
 
-    .footer-content-left img {
+    /* LOGO */
+    .footer-content-left > img {
         width: 130px;
+    }
+
+    /* SOCIAL ICONS FIX */
+    .footer-social-icons img {
+        width: 22px;
+        height: 22px;
     }
 }

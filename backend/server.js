@@ -17,8 +17,8 @@ app.use(express.json())
 
 app.use(cors({
   origin: [
-    "https://half-fried-one.vercel.app/",
-    "https://half-fried-36w2.vercel.app/"
+    "https://half-fried-one.vercel.app",
+    "https://half-fried-36w2.vercel.app"
   ],
   credentials: true
 }))
